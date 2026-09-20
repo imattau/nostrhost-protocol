@@ -191,6 +191,16 @@ func Validate(event *nostr.Event) Verdict {
 		if event.Content != "" && !contentOK {
 			return Verdict{Accept: false, Code: "content-not-json"}
 		}
+		if event.Content != "" {
+			var notice NoticeBody
+			if err := json.Unmarshal([]byte(event.Content), &notice); err == nil {
+				switch notice.Severity {
+				case "", SeverityInfo, SeverityWarning, SeverityCritical:
+				default:
+					return Verdict{Accept: false, Code: "notice-bad-severity"}
+				}
+			}
+		}
 	case KindBuildAttestation:
 		if d == "" {
 			return Verdict{Accept: false, Code: "missing-d"}
