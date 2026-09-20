@@ -1,0 +1,317 @@
+{
+  "schema": 1,
+  "protocol": "nostrhost-control-plane-events",
+  "generated_by": "spec/manifest.json (authoritative, hand-maintained)",
+  "notes": "Machine-readable registry of the NostrHost control-plane event kinds: name, numeric kind, category, document schema version, JSON Schema reference and stable rejection codes. The conformance corpus (fixtures/verdicts.json, fixtures/folds.json) and both bindings must agree with this manifest; see README.md.",
+  "kinds": [
+    {
+      "kind": 10000,
+      "name": "mute-list",
+      "category": "replaceable-list",
+      "nip": "NIP-51",
+      "addressable": true,
+      "retention": "replaceable",
+      "schema_version": 1,
+      "schema": "schemas/10000-mute-list.schema.json",
+      "rejection_codes": ["10000:bad-p"]
+    },
+    {
+      "kind": 10002,
+      "name": "relay-list",
+      "category": "replaceable-list",
+      "nip": "NIP-65",
+      "addressable": true,
+      "retention": "replaceable",
+      "schema_version": 1,
+      "schema": "schemas/10002-relay-list.schema.json",
+      "rejection_codes": ["10002:bad-r"]
+    },
+    {
+      "kind": 10006,
+      "name": "blocked-relays",
+      "category": "replaceable-list",
+      "nip": "NIP-51",
+      "addressable": true,
+      "retention": "replaceable",
+      "schema_version": 1,
+      "schema": null,
+      "rejection_codes": []
+    },
+    {
+      "kind": 2200,
+      "name": "operation-request",
+      "category": "chain",
+      "nip": null,
+      "addressable": false,
+      "retention": "immutable",
+      "schema_version": null,
+      "schema": null,
+      "rejection_codes": ["content-not-json"]
+    },
+    {
+      "kind": 2201,
+      "name": "operation-approval",
+      "category": "chain",
+      "nip": null,
+      "addressable": false,
+      "retention": "immutable",
+      "schema_version": null,
+      "schema": null,
+      "rejection_codes": []
+    },
+    {
+      "kind": 2202,
+      "name": "operation-rejection",
+      "category": "chain",
+      "nip": null,
+      "addressable": false,
+      "retention": "immutable",
+      "schema_version": null,
+      "schema": null,
+      "rejection_codes": []
+    },
+    {
+      "kind": 2203,
+      "name": "execution-started",
+      "category": "chain",
+      "nip": null,
+      "addressable": false,
+      "retention": "immutable",
+      "schema_version": null,
+      "schema": null,
+      "rejection_codes": []
+    },
+    {
+      "kind": 2204,
+      "name": "execution-result",
+      "category": "chain",
+      "nip": null,
+      "addressable": false,
+      "retention": "immutable",
+      "schema_version": null,
+      "schema": null,
+      "rejection_codes": ["content-not-json"]
+    },
+    {
+      "kind": 2205,
+      "name": "execution-progress",
+      "category": "chain",
+      "nip": null,
+      "addressable": false,
+      "retention": "immutable",
+      "schema_version": null,
+      "schema": null,
+      "rejection_codes": []
+    },
+    {
+      "kind": 2210,
+      "name": "system-event",
+      "category": "notice",
+      "nip": null,
+      "addressable": false,
+      "retention": "immutable",
+      "schema_version": null,
+      "schema": null,
+      "rejection_codes": ["content-not-json"]
+    },
+    {
+      "kind": 2211,
+      "name": "service-event",
+      "category": "notice",
+      "nip": null,
+      "addressable": false,
+      "retention": "immutable",
+      "schema_version": null,
+      "schema": null,
+      "rejection_codes": ["content-not-json"]
+    },
+    {
+      "kind": 2212,
+      "name": "backup-event",
+      "category": "notice",
+      "nip": null,
+      "addressable": false,
+      "retention": "immutable",
+      "schema_version": null,
+      "schema": null,
+      "rejection_codes": ["content-not-json"]
+    },
+    {
+      "kind": 2213,
+      "name": "security-event",
+      "category": "notice",
+      "nip": null,
+      "addressable": false,
+      "retention": "immutable",
+      "schema_version": null,
+      "schema": null,
+      "rejection_codes": ["content-not-json"]
+    },
+    {
+      "kind": 2214,
+      "name": "state-bundle",
+      "category": "notice",
+      "nip": null,
+      "addressable": false,
+      "retention": "immutable",
+      "schema_version": null,
+      "schema": null,
+      "rejection_codes": ["content-not-json"]
+    },
+    {
+      "kind": 22242,
+      "name": "auth-challenge",
+      "category": "standard",
+      "nip": "NIP-42",
+      "addressable": false,
+      "retention": "ephemeral",
+      "schema_version": null,
+      "schema": null,
+      "rejection_codes": []
+    },
+    {
+      "kind": 24243,
+      "name": "owner-approval",
+      "category": "chain",
+      "nip": null,
+      "addressable": false,
+      "retention": "immutable",
+      "schema_version": null,
+      "schema": null,
+      "rejection_codes": []
+    },
+    {
+      "kind": 27235,
+      "name": "nip98",
+      "category": "standard",
+      "nip": "NIP-98",
+      "addressable": false,
+      "retention": "ephemeral",
+      "schema_version": null,
+      "schema": null,
+      "rejection_codes": []
+    },
+    {
+      "kind": 27236,
+      "name": "delegation",
+      "category": "delegation",
+      "nip": null,
+      "addressable": false,
+      "retention": "immutable",
+      "schema_version": null,
+      "schema": "schemas/27236-delegation.schema.json",
+      "rejection_codes": ["27236:bad-tags", "27236:bad-expiry", "27236:missing-scope"]
+    },
+    {
+      "kind": 27237,
+      "name": "delegation-revocation",
+      "category": "delegation",
+      "nip": null,
+      "addressable": false,
+      "retention": "immutable",
+      "schema_version": null,
+      "schema": "schemas/27237-revocation.schema.json",
+      "rejection_codes": ["27237:missing-e"]
+    },
+    {
+      "kind": 30000,
+      "name": "permission-set",
+      "category": "replaceable-list",
+      "nip": "NIP-51",
+      "addressable": true,
+      "retention": "replaceable",
+      "schema_version": 1,
+      "schema": "schemas/30000-permission-set.schema.json",
+      "rejection_codes": ["missing-d", "30000:bad-p"]
+    },
+    {
+      "kind": 30078,
+      "name": "app-data",
+      "category": "replaceable-list",
+      "nip": "NIP-78",
+      "addressable": true,
+      "retention": "replaceable",
+      "schema_version": 1,
+      "schema": "schemas/30078-app-data.schema.json",
+      "rejection_codes": ["missing-d"]
+    },
+    {
+      "kind": 30617,
+      "name": "repository-announcement",
+      "category": "state",
+      "nip": null,
+      "addressable": true,
+      "retention": "replaceable",
+      "schema_version": null,
+      "schema": null,
+      "rejection_codes": []
+    },
+    {
+      "kind": 31100,
+      "name": "capability",
+      "category": "addressable-document",
+      "nip": null,
+      "addressable": true,
+      "retention": "replaceable",
+      "schema_version": 1,
+      "schema": "schemas/31100-capability.schema.json",
+      "rejection_codes": [
+        "content-not-json", "missing-d", "d-not-hex64", "schema-invalid",
+        "revision-invalid", "subject-mismatch", "31100:missing-type", "31100:scopes-not-array"
+      ]
+    },
+    {
+      "kind": 31101,
+      "name": "policy",
+      "category": "addressable-document",
+      "nip": null,
+      "addressable": true,
+      "retention": "replaceable",
+      "schema_version": 1,
+      "schema": "schemas/31101-policy.schema.json",
+      "rejection_codes": [
+        "content-not-json", "missing-d", "schema-invalid", "revision-invalid",
+        "subject-mismatch", "31101:missing-schema"
+      ]
+    },
+    {
+      "kind": 31102,
+      "name": "identity",
+      "category": "addressable-document",
+      "nip": null,
+      "addressable": true,
+      "retention": "replaceable",
+      "schema_version": 1,
+      "schema": "schemas/31102-identity.schema.json",
+      "rejection_codes": [
+        "content-not-json", "missing-d", "d-not-hex64", "schema-invalid",
+        "revision-invalid", "subject-mismatch", "31102:missing-username",
+        "31102:bad-signer-type", "31102:enabled-not-bool", "31102:admin-not-bool"
+      ]
+    },
+    {
+      "kind": 31300,
+      "name": "build-attestation",
+      "category": "addressable-document",
+      "nip": null,
+      "addressable": true,
+      "retention": "replaceable",
+      "schema_version": null,
+      "schema": null,
+      "rejection_codes": ["missing-d", "content-not-json"]
+    }
+  ],
+  "categories": [
+    "chain", "notice", "state", "delegation", "addressable-document",
+    "replaceable-list", "standard"
+  ],
+  "rejection_codes": [
+    "content-not-json", "missing-d", "d-not-hex64", "schema-invalid",
+    "revision-invalid", "subject-mismatch",
+    "31100:missing-type", "31100:scopes-not-array", "31101:missing-schema",
+    "31102:missing-username", "31102:bad-signer-type", "31102:enabled-not-bool",
+    "31102:admin-not-bool", "27236:bad-tags", "27236:bad-expiry",
+    "27236:missing-scope", "27237:missing-e", "30000:missing-d", "30000:bad-p",
+    "10000:bad-p", "10002:bad-r"
+  ]
+}
